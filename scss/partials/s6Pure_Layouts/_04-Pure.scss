@@ -1,0 +1,94 @@
+.s6Pure__04-Pure {
+  margin-bottom: 6.4rem;
+
+  &__text {
+    @include S6Pure-text-box(80rem);
+    margin-top: 12rem; // animated in js
+    opacity: 0; // animated in js
+    transition: opacity .4s, margin-top .5s;
+
+    & h2 {
+      @include S6Pure-H2($align: center);
+    }
+
+    & p {
+      @include S6Pure-paragraph($align: center);
+    }
+  }
+
+  &__image {
+    position: relative;
+    margin-left: -100vw;
+    transition: margin-left .9s;
+
+    & img {
+      position: relative;
+      display: block;
+      width: 48rem;
+      height: auto;
+      margin: 6.4rem auto 6.4rem;
+
+      @media only screen and (max-width: 750px) {
+        width: 36rem;
+      }
+
+      @media only screen and (max-width: 450px) {
+        width: 24rem;
+      }
+    }
+  }
+
+  &__shadow {
+    position: absolute;
+    left: 0;
+    top: 49%;
+    transform: translateY(-50%);
+    width: 50%;
+    height: 87%;
+    background-color: #f0f0f0;
+    z-index: -1;
+  }
+
+  &__icons {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-gap: 6.4rem 0;
+    row-gap: 6.4rem;
+    width: 90%;
+    max-width: 90rem;
+    margin: 0 auto;
+
+    @media only screen and (max-width: 600px) {
+      grid-template-columns: 100%;
+    }
+  }
+
+  &__icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: opacity .4s, margin-top .5s;
+    margin-top: 12rem;
+    opacity: 0;
+
+    & svg {
+      height: 6rem;
+      width: auto;
+      margin-bottom: 1.6rem;
+    }
+
+    & h3 {
+      font-size: 2rem;
+      font-weight: 500;
+      margin-bottom: 1.6rem;
+      color: var(--color-txt-grey-darker);
+    }
+
+    & p {
+      font-size: 1.6rem;
+      width: 80%;
+    }
+  }
+}
+

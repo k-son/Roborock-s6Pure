@@ -80,3 +80,42 @@
     padding: 8rem 2rem;
   }
 }
+
+
+/// S6 Pure mixins
+@mixin S6Pure-text-box($max-width) {
+  width: 80%;
+  max-width: $max-width;
+  margin: 0 auto;
+}
+
+@mixin S6Pure-H2($align: left, $color: #000) {
+  font-size: 3.6rem;
+  text-align: $align;
+  font-weight: 500;
+  margin-bottom: 4rem;
+
+  @media only screen and (max-width: 600px) {
+    text-align: left;
+  }
+
+  @media only screen and (max-width: 420px) {
+    font-size: 2.4rem;
+    margin-bottom: 2.4rem;
+  }
+}
+
+@mixin S6Pure-paragraph($align: center, $color: #000) {
+  font-size: 1.8rem;
+  line-height: 1.6;
+  text-align: $align;
+  color: $color;
+
+  @media only screen and (max-width: 600px) {
+    text-align: left;
+  }
+
+  @media only screen and (max-width: 420px) {
+    font-size: 1.6rem;
+  }
+}
