@@ -1,8 +1,7 @@
-# gulp-setup
-my basic setup for web development
+# Roborock S6 Pure
 
+Subpage for a website of polish distribution of Roborock vacuum cleaners.
 
-Copy files and subfolders (not an entire gulp setup folder). Then you can create a new git repo.
-Copy .gitignore.
+Coded by me from the design supplied.
 
-Run gulp watch.
+# UNDER CONSTRUCTION
