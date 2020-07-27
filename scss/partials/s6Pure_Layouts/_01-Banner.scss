@@ -1,0 +1,26 @@
+.s6Pure__01-banner {
+  position: relative;
+
+  &__text {
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+
+    h1 {
+      width: 100%;
+      font-size: 5.4rem;
+      text-align: center;
+      color: var(--color-txt-white);
+
+      @media only screen and (max-width: 450px) {
+        font-size: 4rem;
+      }
+    }
+  }
+
+  & img {
+    width: 100%;
+    height: auto;
+  }
+}

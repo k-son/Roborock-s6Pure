@@ -1,0 +1,15 @@
+.s6Pure__03-Awards {
+  height: 18rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  & img {
+    width: 8rem;
+    height: auto;
+
+    &:not(:last-of-type) {
+      margin-right: 8%;
+    }
+  }
+}
