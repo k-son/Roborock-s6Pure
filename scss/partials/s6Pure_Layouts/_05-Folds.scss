@@ -1,0 +1,46 @@
+.s6Pure__05-Folds {
+  position: relative;
+  padding-top: 6.4rem;
+  margin-bottom: 6.4rem;
+
+  &__fold {
+    position: sticky;
+    top: 4rem;
+    margin-bottom: 2rem;
+
+    @media only screen and (max-width: 750px) {
+      position: relative;
+      margin-bottom: 6.4rem;
+    }
+
+    &__text {
+      position: absolute;
+      left: 8%;
+      top: 35%;
+      transform: translateY(-50%);
+      width: 80%;
+      max-width: 60rem;
+      margin-bottom: 3.2rem;
+
+      @media only screen and (max-width: 750px) {
+        position: relative;
+        transform: translate(0);
+      }
+
+      & h2 {
+        @include S6Pure-H2($align: left);
+        margin-bottom: 3.2rem;
+      }
+
+      & p {
+        @include S6Pure-paragraph($align: left);
+      }
+    }
+
+    & img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+}
