@@ -2,10 +2,11 @@
   margin-bottom: 6.4rem;
 
   &__text {
+    position: relative;
     @include S6Pure-text-box(80rem);
-    margin-top: 12rem; // animated in js
+    transform: translateY(12rem); // animated in js
     opacity: 0; // animated in js
-    transition: opacity .4s, margin-top .5s;
+    transition: opacity .4s, transform .5s;
 
     & h2 {
       @include S6Pure-H2($align: center);
@@ -64,16 +65,21 @@
   }
 
   &__icon {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    transition: opacity .4s, margin-top .5s;
-    margin-top: 12rem;
-    opacity: 0;
+    transition: opacity .4s, transform .5s;
+    transform: translateY(12rem); // animated in js
+    opacity: 0; // animated in js
 
     &:nth-of-type(even) {
       transition-delay: .2s;
+
+      @media only screen and (max-width: 600px) {
+        transition-delay: 0;
+      }
     }
 
     & svg {

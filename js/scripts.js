@@ -95,9 +95,9 @@ function ifElementScrolledUpIntoView(el, pixels) {
 /// *** 04 Pure ***
 const slideUpText_Section04Pure = throttled(200, function() {
   if (ifElementScrolledUpIntoView(textSection04, 200)) {
-    textSection04.classList.add('slideUpAndShow');
+    textSection04.classList.add('translateUpAndShow');
   } else {
-    textSection04.classList.remove('slideUpAndShow');
+    textSection04.classList.remove('translateUpAndShow');
   }
 });
 
@@ -118,9 +118,9 @@ window.addEventListener('scroll', slideRightImage_Section04Pure);
 iconsSection04.forEach(el => {
  const slideUpIcon = throttled(200, function() {
    if (ifElementScrolledUpIntoView(el, 100)) {
-     el.classList.add('slideUpAndShow');
+     el.classList.add('translateUpAndShow');
    } else {
-     el.classList.remove('slideUpAndShow');
+     el.classList.remove('translateUpAndShow');
    }
  });
  window.addEventListener('scroll', slideUpIcon);
