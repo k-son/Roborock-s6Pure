@@ -72,6 +72,10 @@
     margin-top: 12rem;
     opacity: 0;
 
+    &:nth-of-type(even) {
+      transition-delay: .2s;
+    }
+
     & svg {
       height: 6rem;
       width: auto;
