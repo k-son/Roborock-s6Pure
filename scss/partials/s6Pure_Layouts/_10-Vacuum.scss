@@ -1,0 +1,84 @@
+.s6Pure__10-Vacuum {
+  margin-bottom: 6.4rem;
+  padding-top: 6.4rem;
+
+  &__text {
+    @include S6Pure-text-box;
+    margin-bottom: 6.4rem;
+
+    & h2 {
+      @include S6Pure-H2($align: center);
+      transform: translateY(12rem); // animated in js
+      opacity: 0; // animated in js
+      transition: opacity .4s, transform .5s;
+    }
+
+    & p {
+      @include S6Pure-paragraph($align: center);
+      transform: translateY(12rem); // animated in js
+      opacity: 0; // animated in js
+      transition: opacity .4s, transform .5s;
+    }
+  }
+
+  &__image-box {
+    position: relative;
+    width: 80%;
+    max-width: 80rem;
+    margin: 0 auto;
+
+    & img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 2px;
+    }
+
+  }
+
+  &__icon {
+    position: absolute;
+    left: 50%;
+    top: 80%;
+    display: flex;
+    align-items: flex-start;
+    transform: translate(-50%, 12rem); // animated in js
+    opacity: 0; // animated in js
+    transition: opacity .4s, transform .5s;
+
+    & svg {
+      height: 6.4rem;
+      width: auto;
+      margin-right: 1.6rem;
+
+      @media only screen and (max-width: 750px) {
+        height: 4rem;
+      }
+
+      @media only screen and (max-width: 450px) {
+        height: 2.8rem;
+      }
+    }
+
+    & span {
+      font-size: 4rem;
+      color: #fff;
+
+      @media only screen and (max-width: 750px) {
+        font-size: 2.4rem;
+      }
+
+      @media only screen and (max-width: 450px) {
+        font-size: 1.8rem;
+      }
+    }
+  }
+}
+
+
+// js classes
+
+.translateUp-Icon-SectionVacuum {
+  transform: translate(-50%, -50%) !important;
+  opacity: 1 !important;
+}

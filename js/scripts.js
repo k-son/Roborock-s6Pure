@@ -26,6 +26,12 @@ const h2Allergens08 = document.querySelector('.s6Pure__08-Allergens__text h2');
 const paraAllergens08 = document.querySelector('.s6Pure__08-Allergens__text p');
 const iconsAllergens08 = document.querySelectorAll('.s6Pure__08-Allergens__icon');
 
+// 10 Vacuum
+const h2Vacuum10 = document.querySelector('.s6Pure__10-Vacuum__text h2');
+const paraVacuum10 = document.querySelector('.s6Pure__10-Vacuum__text p');
+const iconVacuum10 = document.querySelector('.s6Pure__10-Vacuum__icon');
+
+
 
 ///// REUSABLE FUNCTIONS
 
@@ -285,3 +291,38 @@ const slideUpIcons_Section08Allergens = throttled(200, function() {
 
 window.addEventListener('scroll', slideUpIcons_Section08Allergens);
 /// ** END OF: 08 Allergens **
+
+
+/// *** 10 Vacuum ***
+const slideUpHeading_Section10Vacuum = throttled(200, function() {
+  if (ifElementScrolledUpIntoView(h2Vacuum10, 10)) {
+    h2Vacuum10.classList.add('translateUpAndShow');
+  } else {
+    h2Vacuum10.classList.remove('translateUpAndShow');
+  }
+});
+
+window.addEventListener('scroll', slideUpHeading_Section10Vacuum);
+
+
+const slideUpPara_Section10Vacuum = throttled(200, function() {
+  if (ifElementScrolledUpIntoView(paraVacuum10, 10)) {
+    paraVacuum10.classList.add('translateUpAndShow');
+  } else {
+    paraVacuum10.classList.remove('translateUpAndShow');
+  }
+});
+
+window.addEventListener('scroll', slideUpPara_Section10Vacuum);
+
+
+const slideUpIcon_Section10Vacuum = throttled(200, function() {
+  if (ifElementScrolledUpIntoView(iconVacuum10, 1)) {
+    iconVacuum10.classList.add('translateUp-Icon-SectionVacuum');
+  } else {
+    iconVacuum10.classList.remove('translateUp-Icon-SectionVacuum');
+  }
+});
+
+window.addEventListener('scroll', slideUpIcon_Section10Vacuum);
+/// ** END OF: 10 Vacuum **
