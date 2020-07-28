@@ -1,0 +1,14 @@
+.s6Pure__07-Voice {
+
+  &__text {
+    @include S6Pure-text-box;
+  }
+
+  & h2 {
+    @include S6Pure-H2($align: center); 
+  }
+
+  & p {
+    @include S6Pure-paragraph($align: center);
+  }
+}

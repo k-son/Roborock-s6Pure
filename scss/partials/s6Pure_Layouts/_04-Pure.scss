@@ -3,7 +3,7 @@
 
   &__text {
     position: relative;
-    @include S6Pure-text-box(80rem);
+    @include S6Pure-text-box;
     transform: translateY(12rem); // animated in js
     opacity: 0; // animated in js
     transition: opacity .4s, transform .5s;

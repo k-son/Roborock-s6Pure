@@ -83,7 +83,7 @@
 
 
 /// S6 Pure mixins
-@mixin S6Pure-text-box($max-width) {
+@mixin S6Pure-text-box($max-width: 80rem) {
   width: 80%;
   max-width: $max-width;
   margin: 0 auto;

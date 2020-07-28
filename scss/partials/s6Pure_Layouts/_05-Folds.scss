@@ -32,18 +32,10 @@
       & h2 {
         @include S6Pure-H2($align: left);
         margin-bottom: 3.2rem;
-
-        @media only screen and (max-width: 600px) {
-          text-align: center;
-        }
       }
 
       & p {
         @include S6Pure-paragraph($align: left);
-
-        @media only screen and (max-width: 600px) {
-          text-align: center;
-        }
       }
     }
 
