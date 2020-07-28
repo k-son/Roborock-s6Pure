@@ -1,0 +1,103 @@
+.s6Pure__08-Allergens {
+  padding-top: 6.4rem;
+  margin-bottom: 6.4rem;
+
+  &__text {
+    @include S6Pure-text-box;
+    margin-bottom: 6.4rem;
+
+    & h2 {
+      position: relative;
+      @include S6Pure-H2($align: center); 
+      transform: translateY(12rem); // animated in js
+      opacity: 0; // animated in js
+      transition: opacity .4s, transform .5s;
+    }
+
+    & p {
+      position: relative;
+      @include S6Pure-paragraph($align: center);
+      transform: translateY(12rem); // animated in js
+      opacity: 0; // animated in js
+      transition: opacity .4s, transform .5s;
+    }
+  }
+
+  &__icons {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+
+  &__icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: translateY(12rem); // animated in js
+    opacity: 0; // animated in js
+    transition: opacity .4s, transform .5s;
+
+    &:not(:last-of-type) {
+      margin-right: 8%;
+    }
+
+    &:nth-of-type(2) {
+      transition-delay: .2s;
+    }
+
+    &:nth-of-type(3) {
+      transition-delay: .4s;
+    }
+
+    & svg {
+      height: 6.4rem;
+      width: auto;
+      margin-bottom: 1.6rem;
+
+      @media only screen and (max-width: 450px) {
+        height: 4.8rem;
+      }
+    }
+
+    & h5 {
+      font-size: 1.8rem;
+
+      @media only screen and (max-width: 450px) {
+        font-size: 1.4rem;
+      }
+    }
+
+    &__percent {
+      margin-bottom: 1.6rem;
+
+      & span {
+        color: #777;
+  
+        &:nth-of-type(1) {
+          font-size: 4.8rem;
+
+          @media only screen and (max-width: 450px) {
+            font-size: 3.2rem;
+          }
+        }
+  
+        &:nth-of-type(2) {
+          font-size: 2.4rem;
+
+          @media only screen and (max-width: 450px) {
+            font-size: 1.6rem;
+          }
+        }
+      }
+    }
+  }
+
+  & img {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-top: -15%;
+    z-index: -1;
+  }
+}

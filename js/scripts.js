@@ -21,6 +21,10 @@ const paraVoice07 = document.querySelector('.s6Pure__07-Voice__text p');
 const bubblesVoice07 = document.querySelectorAll('.s6Pure__07-Voice__text-bubble');
 const alexaVoice07 = document.querySelector('.s6Pure__07-Voice__alexa');
 
+// 08 Allergens 
+const h2Allergens08 = document.querySelector('.s6Pure__08-Allergens__text h2');
+const paraAllergens08 = document.querySelector('.s6Pure__08-Allergens__text p');
+const iconsAllergens08 = document.querySelectorAll('.s6Pure__08-Allergens__icon');
 
 
 ///// REUSABLE FUNCTIONS
@@ -244,3 +248,40 @@ const slideUpAlexa_Section07Voice = throttled(200, function() {
 
 window.addEventListener('scroll', slideUpAlexa_Section07Voice);
 /// ** END OF: 07 Voice **
+
+
+/// *** 08 Allergens ***
+const slideUpHeading_Section08Allergens = throttled(200, function() {
+  if (ifElementScrolledUpIntoView(h2Allergens08, 10)) {
+    h2Allergens08.classList.add('translateUpAndShow');
+  } else {
+    h2Allergens08.classList.remove('translateUpAndShow');
+  }
+});
+
+window.addEventListener('scroll', slideUpHeading_Section08Allergens);
+
+
+const slideUpPara_Section08Allergens = throttled(200, function() {
+  if (ifElementScrolledUpIntoView(paraAllergens08, 10)) {
+    paraAllergens08.classList.add('translateUpAndShow');
+  } else {
+    paraAllergens08.classList.remove('translateUpAndShow');
+  }
+});
+
+window.addEventListener('scroll', slideUpPara_Section08Allergens);
+
+
+const slideUpIcons_Section08Allergens = throttled(200, function() {
+  iconsAllergens08.forEach(el => {
+    if (ifElementScrolledUpIntoView(el, 10)) {
+      el.classList.add('translateUpAndShow');
+    } else {
+      el.classList.remove('translateUpAndShow');
+    }
+  })
+});
+
+window.addEventListener('scroll', slideUpIcons_Section08Allergens);
+/// ** END OF: 08 Allergens **
