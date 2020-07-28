@@ -15,8 +15,11 @@ const h2Suction06 = document.querySelector('.s6Pure__06-Suction h2');
 const paraSuction06 = document.querySelector('.s6Pure__06-Suction p');
 const rpmSuction06 = document.querySelector('.s6Pure__06-Suction span');
 
-
-
+// 07 Voice
+const h2Voice07 = document.querySelector('.s6Pure__07-Voice__text h2');
+const paraVoice07 = document.querySelector('.s6Pure__07-Voice__text p');
+const bubblesVoice07 = document.querySelectorAll('.s6Pure__07-Voice__text-bubble');
+const alexaVoice07 = document.querySelector('.s6Pure__07-Voice__alexa');
 
 
 
@@ -193,3 +196,51 @@ const slideUpParaAndSpan_Section06Suction = throttled(200, function() {
 
 window.addEventListener('scroll', slideUpParaAndSpan_Section06Suction);
 /// ** END OF: 06 Suction **
+
+
+/// *** 07 Voice ***
+const slideUpHeading_Section07Voice = throttled(200, function() {
+  if (ifElementScrolledUpIntoView(h2Voice07, 10)) {
+    h2Voice07.classList.add('translateUpAndShow');
+  } else {
+    h2Voice07.classList.remove('translateUpAndShow');
+  }
+});
+
+window.addEventListener('scroll', slideUpHeading_Section07Voice);
+
+
+const slideUpPara_Section07Voice = throttled(200, function() {
+  if (ifElementScrolledUpIntoView(paraVoice07, 10)) {
+    paraVoice07.classList.add('translateUpAndShow');
+  } else {
+    paraVoice07.classList.remove('translateUpAndShow');
+  }
+});
+
+window.addEventListener('scroll', slideUpPara_Section07Voice);
+
+
+const slideUpBubbles_Section07Voice = throttled(200, function() {
+  bubblesVoice07.forEach(el => {
+    if (ifElementScrolledUpIntoView(el, 10)) {
+      el.classList.add('translateUpAndShowBubbles-Voice');
+    } else {
+      el.classList.remove('translateUpAndShowBubbles-Voice');
+    }
+  })
+});
+
+window.addEventListener('scroll', slideUpBubbles_Section07Voice);
+
+
+const slideUpAlexa_Section07Voice = throttled(200, function() {
+  if (ifElementScrolledUpIntoView(alexaVoice07, 10)) {
+    alexaVoice07.classList.add('translateUpAndShow');
+  } else {
+    alexaVoice07.classList.remove('translateUpAndShow');
+  }
+});
+
+window.addEventListener('scroll', slideUpAlexa_Section07Voice);
+/// ** END OF: 07 Voice **

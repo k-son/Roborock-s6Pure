@@ -1,14 +1,116 @@
 .s6Pure__07-Voice {
+  padding-top: 6.4rem;
 
   &__text {
     @include S6Pure-text-box;
+    margin-bottom: 6.4rem;
+    
+    & h2 {
+      position: relative;
+      @include S6Pure-H2($align: center); 
+      transform: translateY(12rem); // animated in js
+      opacity: 0; // animated in js
+      transition: opacity .4s, transform .5s;
+    }
+  
+    & p {
+      position: relative;
+      @include S6Pure-paragraph($align: center);
+      transform: translateY(12rem); // animated in js
+      opacity: 0; // animated in js
+      transition: opacity .4s, transform .5s;
+    }
   }
 
-  & h2 {
-    @include S6Pure-H2($align: center); 
+  &__text-bubbles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 70rem;
+    margin: 0 auto 3.2rem;
+    padding: 0 2rem;
   }
 
-  & p {
-    @include S6Pure-paragraph($align: center);
+  &__text-bubble {
+    position: relative;
+    position: relative;
+    display: inline-block;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+    color: #fff;
+    background-color: #aaa;
+    padding: 1.2rem 3.2rem;
+    border-radius: 20px;
+    opacity: .4;
+    margin-bottom: 4rem;
+    transform: translateY(12rem); // animated in js
+    opacity: 0; // animated in js
+    transition: opacity .4s, transform .5s;
+
+    &::after{
+      position: absolute;
+      bottom: -10px;
+      display: block;
+      content: "";
+      width: 0;
+      height: 0;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-top: 10px solid #aaa;
+    }
+
+    &:nth-of-type(1) {
+
+      &::after{
+        left: 20%;
+      }
+    }
+
+    &:nth-of-type(2) {
+      background-color: #007bff;
+      margin-left: 12rem;
+      transition-delay: .2s;
+
+      @media only screen and (max-width: 600px) {
+        margin-left: 4rem;
+      }
+
+      &::after{
+        border-top-color: #007bff;
+        left: 35%;
+      }
+    }
+
+    &:nth-of-type(3) {
+
+      &::after{
+        left: 70%;
+      }
+    }
   }
+
+  &__alexa {
+    position: relative;
+    display: block;
+    width: 30rem;
+    height: auto;
+    margin: 0 auto;
+    transform: translateY(12rem); // animated in js
+    opacity: 0; // animated in js
+    transition: opacity .4s, transform .5s;
+  }
+
+  &__image {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
+}
+
+
+// js classes 
+.translateUpAndShowBubbles-Voice {
+  transform: translateY(0) !important;
+  opacity: .4 !important;
 }
