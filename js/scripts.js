@@ -10,6 +10,14 @@ const iconsSection04 = document.querySelectorAll('.s6Pure__04-Pure__icon');
 // 05 Fold
 const foldsSection05 = document.querySelectorAll('.s6Pure__05-Folds__fold');
 
+// 06 Suction
+const h2Suction06 = document.querySelector('.s6Pure__06-Suction h2');
+const paraSuction06 = document.querySelector('.s6Pure__06-Suction p');
+const rpmSuction06 = document.querySelector('.s6Pure__06-Suction span');
+
+
+
+
 
 
 ///// REUSABLE FUNCTIONS
@@ -158,3 +166,30 @@ const foldsFade3 = throttled(200, function() {
 });
 
 window.addEventListener('scroll', foldsFade3);
+/// ** END OF: 05 Folds **
+
+
+/// *** 06 Suction ***
+const slideUpHeading_Section06Suction = throttled(200, function() {
+  if (ifElementScrolledUpIntoView(h2Suction06, 10)) {
+    h2Suction06.classList.add('slideUp-Suction');
+  } else {
+    h2Suction06.classList.remove('slideUp-Suction');
+  }
+});
+
+window.addEventListener('scroll', slideUpHeading_Section06Suction);
+
+
+const slideUpParaAndSpan_Section06Suction = throttled(200, function() {
+  if (ifElementScrolledUpIntoView(paraSuction06, 10)) {
+    paraSuction06.classList.add('slideUp-Suction');
+    rpmSuction06.classList.add('slideUp-rpm-Suction');
+  } else {
+    paraSuction06.classList.remove('slideUp-Suction');
+    rpmSuction06.classList.remove('slideUp-rpm-Suction');
+  }
+});
+
+window.addEventListener('scroll', slideUpParaAndSpan_Section06Suction);
+/// ** END OF: 06 Suction **
