@@ -7,6 +7,9 @@ const textSection04 = document.querySelector('.s6Pure__04-Pure__text');
 const imageSection04 = document.querySelector('.s6Pure__04-Pure__image');
 const iconsSection04 = document.querySelectorAll('.s6Pure__04-Pure__icon');
 
+// 05 Fold
+const foldsSection05 = document.querySelectorAll('.s6Pure__05-Folds__fold');
+
 
 
 ///// REUSABLE FUNCTIONS
@@ -114,4 +117,44 @@ iconsSection04.forEach(el => {
  });
  window.addEventListener('scroll', slideUpIcon);
 })
-//// ** END OF: 04 Pure **
+/// ** END OF: 04 Pure **
+
+
+/// *** 05 Folds ***
+const foldsFade1 = throttled(200, function() {
+  for (let i=1; i<foldsSection05.length; i++) {
+    if (ifElementScrolledUpIntoView(foldsSection05[i], 300)) {
+      foldsSection05[i-1].classList.add('foldFade-1');
+    } else {
+      foldsSection05[i-1].classList.remove('foldFade-1');
+    }
+  }
+});
+
+window.addEventListener('scroll', foldsFade1);
+
+
+const foldsFade2 = throttled(200, function() {
+  for (let i=1; i<foldsSection05.length; i++) {
+    if (ifElementScrolledUpIntoView(foldsSection05[i], 450)) {
+      foldsSection05[i-1].classList.add('foldFade-2');
+    } else {
+      foldsSection05[i-1].classList.remove('foldFade-2');
+    }
+  }
+});
+
+window.addEventListener('scroll', foldsFade2);
+
+
+const foldsFade3 = throttled(200, function() {
+  for (let i=1; i<foldsSection05.length; i++) {
+    if (isElementFullyInViewport(foldsSection05[i])) {
+      foldsSection05[i-1].classList.add('foldFade-3');
+    } else {
+      foldsSection05[i-1].classList.remove('foldFade-3');
+    }
+  }
+});
+
+window.addEventListener('scroll', foldsFade3);
