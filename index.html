@@ -10,7 +10,10 @@
 
   <title>Roborock S6 Pure</title>
 
-  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap&subset=latin-ext" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap&subset=latin-ext" rel="stylesheet">
+
+  <link rel="stylesheet" href="./OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="./OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css">
 
   <link rel="stylesheet" href="css/main.min.css">
   <script src="./js/scripts.js" defer></script>
@@ -232,7 +235,48 @@
         </div>
       </div>
     </section>
+    <section class="s6Pure__11-Color">
+      <div class="s6Pure__11-Color__text">
+        <h2>Multiple colour options</h2>
+        <p>Multiple colour options</p>
+        <div class="s6Pure__11-Color__buttons">
+          <button class="s6Pure__11-Color__button s6Pure__11-Color__button--white"></button>
+          <button class="s6Pure__11-Color__button s6Pure__11-Color__button--black"></button>
+        </div>
+      </div>
+      <div class="s6Pure__11-Color__gallery">
+        <div class="s6Pure__11-Color__gallery--white owl-carousel owl-theme" id="s6Pure_color-gallery--white">
+          <img src="./images/heros-s6-series-s6pure-white-front-2x.png" alt="Roborock S6 Pure w kolorze białym.">
+          <img src="./images/heros-s6-series-s6pure-white-side-2x.png" alt="Roborock S6 Pure w kolorze białym.">
+        </div>
+        <div class="s6Pure__11-Color__gallery--black owl-carousel owl-theme displayNone">
+          <img src="./images/heros-s6-series-s6pure-black-front-2x.png" alt="Roborock S6 Pure w kolorze czarnym.">
+          <img src="./images/heros-s6-series-s6pure-black-side-2x.png" alt="Roborock S6 Pure w kolorze czarnym.">
+        </div>
+        <!--
+        <div class="s6Pure__11-Color__gallery-nav">
+          <div class="owl-nav">
+            <div class="owl-prev">prev</div>
+            <div class="owl-next">next</div>
+          </div>
+          <div class="owl-dots">
+            <div class="owl-dot active"><span></span></div>
+            <div class="owl-dot"><span></span></div>
+            <div class="owl-dot"><span></span></div>
+          </div>
+        </div>
+        -->
+      </div>
+    </section>
   </main>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="./OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+  <script>
+    $('.owl-carousel').owlCarousel({
+      loop: true,
+      nav: true,
+      items: 1
+    });
+  </script>
 </body>
-
 </html>

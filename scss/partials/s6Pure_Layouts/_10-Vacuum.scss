@@ -18,6 +18,7 @@
       transform: translateY(12rem); // animated in js
       opacity: 0; // animated in js
       transition: opacity .4s, transform .5s;
+      transition-delay: .2s;
     }
   }
 
