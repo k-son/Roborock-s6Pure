@@ -163,7 +163,7 @@ window.addEventListener('scroll', foldsFade1);
 
 const foldsFade2 = throttled(200, function() {
   for (let i=1; i<foldsSection05.length; i++) {
-    if (ifElementScrolledUpIntoView(foldsSection05[i], 450)) {
+    if (ifElementScrolledUpIntoView(foldsSection05[i], 400)) {
       foldsSection05[i-1].classList.add('foldFade-2');
     } else {
       foldsSection05[i-1].classList.remove('foldFade-2');
@@ -176,7 +176,7 @@ window.addEventListener('scroll', foldsFade2);
 
 const foldsFade3 = throttled(200, function() {
   for (let i=1; i<foldsSection05.length; i++) {
-    if (isElementFullyInViewport(foldsSection05[i])) {
+    if (ifElementScrolledUpIntoView(foldsSection05[i], 500)) {
       foldsSection05[i-1].classList.add('foldFade-3');
     } else {
       foldsSection05[i-1].classList.remove('foldFade-3');
