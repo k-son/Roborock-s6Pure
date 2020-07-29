@@ -31,6 +31,12 @@ const h2Vacuum10 = document.querySelector('.s6Pure__10-Vacuum__text h2');
 const paraVacuum10 = document.querySelector('.s6Pure__10-Vacuum__text p');
 const iconVacuum10 = document.querySelector('.s6Pure__10-Vacuum__icon');
 
+// 11 Color 
+const buttonWhiteColor11 = document.querySelector('.s6Pure__11-Color__button--white');
+const buttonBlackColor11 = document.querySelector('.s6Pure__11-Color__button--black');
+const galleryWhiteColor11 = document.querySelector('.s6Pure__11-Color__gallery--white');
+const galleryBlackColor11 = document.querySelector('.s6Pure__11-Color__gallery--black');
+
 
 
 ///// REUSABLE FUNCTIONS
@@ -326,3 +332,25 @@ const slideUpIcon_Section10Vacuum = throttled(200, function() {
 
 window.addEventListener('scroll', slideUpIcon_Section10Vacuum);
 /// ** END OF: 10 Vacuum **
+
+
+/// *** 11 Color ***
+const showBlackGallery = function() {
+  buttonWhiteColor11.classList.remove('s6PureColor-button-active');
+  buttonBlackColor11.classList.add('s6PureColor-button-active');
+  galleryWhiteColor11.classList.add('displayNone');
+  galleryBlackColor11.classList.remove('displayNone');
+}
+
+buttonBlackColor11.addEventListener('click', showBlackGallery);
+
+
+const showWhiteGallery = function() {
+  buttonBlackColor11.classList.remove('s6PureColor-button-active');
+  buttonWhiteColor11.classList.add('s6PureColor-button-active');
+  galleryBlackColor11.classList.add('displayNone');
+  galleryWhiteColor11.classList.remove('displayNone');
+}
+
+buttonWhiteColor11.addEventListener('click', showWhiteGallery);
+/// ** END OF: 11 Color **
