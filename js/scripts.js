@@ -37,6 +37,11 @@ const buttonBlackColor11 = document.querySelector('.s6Pure__11-Color__button--bl
 const galleryWhiteColor11 = document.querySelector('.s6Pure__11-Color__gallery--white');
 const galleryBlackColor11 = document.querySelector('.s6Pure__11-Color__gallery--black');
 
+// Tooltips
+let tooltips = document.querySelectorAll('.tooltip');
+let tooltipTexts = document.querySelectorAll('.tooltiptext');
+const closeTooltipBtns = document.querySelectorAll('.tooltipCloseBtn');
+
 
 
 ///// REUSABLE FUNCTIONS
@@ -354,3 +359,39 @@ const showWhiteGallery = function() {
 
 buttonWhiteColor11.addEventListener('click', showWhiteGallery);
 /// ** END OF: 11 Color **
+
+
+/// *** Tooltips ***
+tooltips = Array.from(tooltips);
+
+for (let i=0; i<tooltips.length; i++) {
+  tooltips[i].addEventListener('click', function() {
+
+    // close any other open tooltip
+    const index = tooltips.indexOf(tooltips[i]);
+    const clonedTooltips = tooltips.slice(0);
+    clonedTooltips.splice(index, 1);
+
+    clonedTooltips.forEach(el => {
+      const tooltipBox = el.nextElementSibling.nextElementSibling;
+      const closeBtn = tooltipBox.firstChild;
+      tooltipBox.classList.remove('showTooltipText');
+      closeBtn.classList.add('displayNone'); // make closeBtn keyboard unaccessible
+      el.classList.remove('colorInfo');
+    });
+
+    // open selected tooltip
+    const tooltipBox = tooltips[i].nextElementSibling.nextElementSibling;
+    tooltipBox.classList.toggle('showTooltipText');
+    tooltips[i].classList.toggle('colorInfo');
+    closeTooltipBtns[i].classList.toggle('displayNone');
+
+    // close tooltip on close button press
+    closeTooltipBtns[i].addEventListener('click', function() {
+      tooltipBox.classList.remove('showTooltipText');
+      tooltips[i].classList.remove('colorInfo');
+      this.classList.add('displayNone');
+    })
+  })
+}
+/// ** END OF: Tooltips **
