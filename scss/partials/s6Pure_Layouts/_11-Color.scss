@@ -125,6 +125,10 @@
 
     & .owl-prev {
       margin-right: 16rem !important;
+
+      @media only screen and (max-width: 450px) {
+        margin-right: 10rem !important;
+      }
     }
 
     & .owl-next {
