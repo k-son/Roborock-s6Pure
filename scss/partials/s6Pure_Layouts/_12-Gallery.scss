@@ -1,0 +1,101 @@
+.s6Pure__12-Gallery {
+  margin-bottom: 6.4rem;
+  padding-top: 6.4rem;
+  overflow: hidden;
+
+  &__text {
+    @include S6Pure-text-box;
+    margin-bottom: 6.4rem;
+
+    & h2 {
+      @include S6Pure-H2($align: center);
+    }
+  }
+
+  &__items-container {
+    position: relative;
+    width: 140%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @media only screen and (max-width: 750px) {
+      width: 210%;
+    }
+
+    & .owl-nav {
+      display: flex;
+      justify-content: space-between;
+      width: 32rem;
+      margin: 0 auto;
+      font-size: 6.4rem;
+
+      @media only screen and (max-width: 450px) {
+        width: 24rem;
+      }
+    }
+
+    & .owl-prev,
+    & .owl-next {
+      color: #666 !important;
+      transition: all .2s;
+
+      &:hover {
+        color: #888 !important;
+        background-color: transparent !important;
+      }
+
+      & span {
+        padding: 0 1.6rem;
+      }
+    }    
+
+    & .owl-dots {
+      position: relative;
+      transform: translateY(-5.2rem);
+      width: 10rem;
+      margin: 0 auto;
+    }
+  }
+
+  &__item {
+    position: relative;
+    width: fit-content;
+
+    & img {
+      display: block;
+      width: 56rem;
+      height: auto;
+      border-radius: 2px;
+    }
+
+    &__text {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      max-width: 20rem;
+      margin-right: 2rem;
+
+      @media only screen and (max-width: 1100px) {
+        position: static;
+        right: unset;
+        top: unset;
+        transform: translateY(0);
+        max-width: 80%;
+        margin: 3.2rem auto 1.6rem;
+        text-align: center;
+      }
+
+      & h4 {
+        font-size: 2.4rem;
+        font-weight: 500;
+        margin-bottom: 2.4rem;
+      }
+
+      & p {
+        font-size: 1.6rem;
+        line-height: 1.6;
+      }
+    }
+  }
+}

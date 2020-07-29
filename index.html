@@ -255,14 +255,82 @@
         </div>
       </div>
     </section>
+    <section class="s6Pure__12-Gallery">
+      <div class="s6Pure__12-Gallery__text">
+        <h2>Discover even more ... </h2>
+      </div>
+      <div class="s6Pure__12-Gallery__items-container owl-carousel owl-theme">
+        <div class="s6Pure__12-Gallery__item">
+          <img src="./images/heros-s6-series-carousel-mop-pads-2x.jpg" alt="Wkładki mopa.">
+          <div class="s6Pure__12-Gallery__item__text">
+            <h4>Integrated cable tidy</h4>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi sint at nihil?</p>
+          </div>
+        </div>
+        <div class="s6Pure__12-Gallery__item">
+          <img src="./images/heros-s6-series-carousel-quick-release-2x.jpg" alt="Łatwo wyjmowalna szczotka.">
+          <div class="s6Pure__12-Gallery__item__text">
+            <h4>Integrated cable tidy</h4>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi sint at nihil?</p>
+          </div>
+        </div>
+        <div class="s6Pure__12-Gallery__item">
+          <img src="./images/heros-s6-series-carousel-cable-tidy-2x.jpg" alt="Stacja ładująca podłączona kablem do gniazdka.">
+          <div class="s6Pure__12-Gallery__item__text">
+            <h4>Integrated cable tidy</h4>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi sint at nihil?</p>
+          </div>
+        </div>
+        <div class="s6Pure__12-Gallery__item">
+          <img src="./images/heros-s6-series-carousel-maintenance-2x.jpg" alt="Łatwo wyjmowalny pojemnik ułatwia czyszczenie.">
+          <div class="s6Pure__12-Gallery__item__text">
+            <h4>Integrated cable tidy</h4>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi sint at nihil?</p>
+          </div>
+        </div>
+        <div class="s6Pure__12-Gallery__item">
+          <img src="./images/heros-s6-series-carousel-battery-2x.jpg" alt="Umiejscowienie baterii w Roborock S6 Pure.">
+          <div class="s6Pure__12-Gallery__item__text">
+            <h4>Integrated cable tidy</h4>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi sint at nihil?</p>
+          </div>
+        </div>
+        <div class="s6Pure__12-Gallery__item">
+          <img src="./images/heros-s6-series-carousel-recharge-2x.jpg" alt="Roborock S6 Pure podłączony do stacji ładującej.">
+          <div class="s6Pure__12-Gallery__item__text">
+            <h4>Integrated cable tidy</h4>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi sint at nihil?</p>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="./OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
   <script>
-    $('.owl-carousel').owlCarousel({
+    // gallery in section 11 - Color
+    $('.s6Pure__11-Color__gallery .owl-carousel').owlCarousel({
       loop: true,
       nav: true,
       items: 1
+    });
+
+    // gallery in section 12 - Gallery
+    $('.s6Pure__12-Gallery__items-container.owl-carousel').owlCarousel({
+      loop: true,
+      nav: true,
+      items: 3,
+      responsive: {
+        0:{
+          margin: 24
+        },
+        450:{
+          margin: 40
+        },
+        1100:{
+          margin: 80
+        }
+      }
     });
   </script>
 </body>
