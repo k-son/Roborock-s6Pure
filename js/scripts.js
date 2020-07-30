@@ -39,6 +39,7 @@ const galleryBlackColor11 = document.querySelector('.s6Pure__11-Color__gallery--
 
 // Tooltips
 let tooltips = document.querySelectorAll('.tooltip');
+let tooltipAnnotations = document.querySelectorAll('.s6Pure__annotation');
 let tooltipTexts = document.querySelectorAll('.tooltiptext');
 const closeTooltipBtns = document.querySelectorAll('.tooltipCloseBtn');
 
@@ -362,36 +363,41 @@ buttonWhiteColor11.addEventListener('click', showWhiteGallery);
 
 
 /// *** Tooltips ***
+// solution for absolute positioned buttons
+
 tooltips = Array.from(tooltips);
+tooltipAnnotations = Array.from(tooltipAnnotations);
 
 for (let i=0; i<tooltips.length; i++) {
   tooltips[i].addEventListener('click', function() {
 
-    // close any other open tooltip
-    const index = tooltips.indexOf(tooltips[i]);
-    const clonedTooltips = tooltips.slice(0);
-    clonedTooltips.splice(index, 1);
+    const suffix = this.id.slice(-2);
+    const annotation = document.getElementById(`s6Pure__annotation-${suffix}`);
 
-    clonedTooltips.forEach(el => {
-      const tooltipBox = el.nextElementSibling.nextElementSibling;
-      const closeBtn = tooltipBox.firstChild;
-      tooltipBox.classList.remove('showTooltipText');
-      closeBtn.classList.add('displayNone'); // make closeBtn keyboard unaccessible
-      el.classList.remove('colorInfo');
-    });
+    // close any other open tooltip
+    const clonnedTooltips = tooltips.slice(0);
+    const tooltipIndex = tooltips.indexOf(this);
+    clonnedTooltips.splice(tooltipIndex, 1);
+
+    const clonedTooltipsAnnotations = tooltipAnnotations.slice(0);
+    const tooltipAnnotationsIndex = tooltipAnnotations.indexOf(annotation);
+    clonedTooltipsAnnotations.splice(tooltipAnnotationsIndex, 1);
+
+    clonedTooltipsAnnotations.forEach(el => {
+      el.firstElementChild.classList.remove('showTooltipText');
+      el.classList.add('displayNone');
+    })
+    clonnedTooltips.forEach(el => el.classList.remove('colorInfo'));
 
     // open selected tooltip
-    const tooltipBox = tooltips[i].nextElementSibling.nextElementSibling;
-    tooltipBox.classList.toggle('showTooltipText');
+    annotation.classList.toggle('displayNone');
+    annotation.firstElementChild.classList.toggle('showTooltipText');
     tooltips[i].classList.toggle('colorInfo');
-    closeTooltipBtns[i].classList.toggle('displayNone');
 
     // close tooltip on close button press
-    closeTooltipBtns[i].addEventListener('click', function() {
-      tooltipBox.classList.remove('showTooltipText');
+    annotation.firstElementChild.firstElementChild.addEventListener('click', function() {
+      annotation.firstElementChild.classList.remove('showTooltipText');
+      annotation.classList.add('displayNone');
       tooltips[i].classList.remove('colorInfo');
-      this.classList.add('displayNone');
     })
-  })
-}
-/// ** END OF: Tooltips **
+})}
