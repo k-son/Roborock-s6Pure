@@ -255,7 +255,7 @@ const slideUpBubbles_Section07Voice = throttled(200, function() {
 
 window.addEventListener('scroll', slideUpBubbles_Section07Voice);
 
-
+/* Alexa logo slide up
 const slideUpAlexa_Section07Voice = throttled(200, function() {
   if (ifElementScrolledUpIntoView(alexaVoice07, 10)) {
     alexaVoice07.classList.add('translateUpAndShow');
@@ -265,6 +265,7 @@ const slideUpAlexa_Section07Voice = throttled(200, function() {
 });
 
 window.addEventListener('scroll', slideUpAlexa_Section07Voice);
+*/
 /// ** END OF: 07 Voice **
 
 
