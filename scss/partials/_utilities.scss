@@ -25,14 +25,14 @@
   margin-left: 0 !important;
 }
 
- .positionFixedTop {
+.positionFixedTop {
    position: fixed !important;
    top: 0 !important;
    left: 0 !important;
    z-index: -1 !important;
  }
 
- .translateUpAndShow {
+.translateUpAndShow {
    transform: translateY(0) !important;
    opacity: 1 !important;
  }
